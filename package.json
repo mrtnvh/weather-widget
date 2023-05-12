@@ -1,0 +1,30 @@
+{
+  "name": "weather-widget",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist/weather-widget.es.js",
+  "exports": {
+    ".": "./dist/weather-widget.es.js"
+  },
+  "types": "types/weather-widget.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@lit-labs/task": "^2.1.1",
+    "chart.js": "^4.3.0",
+    "colorjs.io": "^0.4.3",
+    "iconify-icon": "^1.0.7",
+    "lit": "^2.6.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0"
+  }
+}
