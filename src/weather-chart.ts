@@ -17,8 +17,11 @@ export class WeatherChart extends LitElement {
     const startColor = new Color(baseColor);
     const endColor = new Color(baseColor);
 
-    startColor.lch.l = 100;
-    startColor.lch.c = 50;
+    startColor.lch.l = 90;
+    startColor.lch.c = 33;
+
+    endColor.lch.l = 33;
+    endColor.lch.c = 75;
 
     const context = canvas.getContext("2d");
     const { width, height } = canvas.getBoundingClientRect();
