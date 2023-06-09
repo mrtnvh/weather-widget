@@ -144,7 +144,8 @@ export const WeatherWidgetStyle = css`
       display: flex;
     }
 
-    & weather-chart {
+    & weather-chart,
+    & svg {
       position: absolute;
       inline-size: 100%;
       block-size: 100%;
@@ -163,7 +164,8 @@ export const WeatherWidgetStyle = css`
       display: flex;
     }
 
-    & weather-chart {
+    & weather-chart,
+    & svg {
       position: absolute;
       inline-size: 100%;
       block-size: 100%;

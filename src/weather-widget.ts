@@ -14,7 +14,7 @@ export class WeatherWidget extends LitElement {
 
   constructor() {
     super();
-    this.#forecastController = new ForecastController(this, /* Number(this.latitude), Number(this.longitude) */);
+    this.#forecastController = new ForecastController(this /* Number(this.latitude), Number(this.longitude) */);
     this.#weatherTypeController = new WeatherTypeController(this);
   }
 
@@ -141,16 +141,56 @@ export class WeatherWidget extends LitElement {
 
         <!-- Hourly temperature -->
         <div class="hourly__temperature__chart">
-          <weather-chart .data=${_currentWeather.hourlyTemperature} .backgroundColorBase=${colorWarm}></weather-chart>
+          <!-- <weather-chart .data=${_currentWeather.hourlyTemperature} .backgroundColorBase=${colorWarm}></weather-chart> -->
+          <svg viewBox="0 0 303 134" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M302.667 54.3307V133.787H0V25.41C12.5113 29.1607 24.2287 51.3387 35.3473 72.3847C46.2553 93.03 56.5873 112.586 66.528 112.586C79.51 112.586 87.5114 98.5353 95.6207 84.294C103.953 69.6627 112.399 54.8307 126.477 54.8307C140.653 54.8307 148.357 63.968 155.902 72.918C163.143 81.5067 170.239 89.9227 182.77 89.9227C193.697 89.9227 198.891 73.5233 204.843 54.7313C212.829 29.5187 222.178 0 248.567 0C267.359 0 273.848 14.4907 280.153 28.5727C285.427 40.3447 290.573 51.8313 302.667 54.3307Z"
+              fill="url(#paint0_linear_201_31)"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_201_31"
+                x1="300"
+                y1="8.5"
+                x2="-5.42372e-06"
+                y2="126.5"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#D5724B" />
+                <stop offset="1" stop-color="#F8CCBA" />
+              </linearGradient>
+            </defs>
+          </svg>
         </div>
 
         <!-- Hourly precipitation -->
         <div class="hourly__precipitation__chart">
-          <weather-chart
+          <!-- <weather-chart
             .data=${_currentWeather.hourlyPrecipitation}
             inverse
             .backgroundColorBase=${colorCool}
-          ></weather-chart>
+          ></weather-chart> -->
+          <svg viewBox="0 0 303 48" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path
+              d="M82 16.5C47 16.5 34.5 48 0.5 48V0.5H303V43.5C265 43.5 254 11.5 224.5 11.5C187 11.5 183 33 152 33C121 33 117 16.5 82 16.5Z"
+              fill="url(#paint0_linear_309_49)"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_309_49"
+                x1="0.500002"
+                y1="0.820938"
+                x2="302.961"
+                y2="40.7138"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#AFBFF0" />
+                <stop offset="1" stop-color="#3156C3" />
+              </linearGradient>
+            </defs>
+          </svg>
         </div>
 
         <!-- Upcoming days -->
