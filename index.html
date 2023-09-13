@@ -6,17 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Widget Web Component</title>
     <link rel="stylesheet" href="./src/index.css" />
+    <script type="module" src="/src/global.ts"></script>
     <script type="module" src="/src/weather-widget.ts"></script>
   </head>
   <body>
     <div class="resizable">
       <weather-widget
-        city="Turnhout"
-        country="Belgium"
+        city="Brandevoort, De Veste"
+        country="Netherlands"
         date="2023-03-05"
-        latitude="52.52"
-        longitude="13.419998"
+        latitude="51.459516701556545"
+        longitude="5.610825209118448"
       ></weather-widget>
     </div>
+    <form id="locator" autocomplete="off">
+      <label for="city">City</label>
+      <input type="text" id="city" name="city" />
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>
